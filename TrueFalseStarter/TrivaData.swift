@@ -36,7 +36,7 @@ let questionOne = Trivia(question: "In which year did BASE jumping begin?", answ
 
 //Array of Trivia Questions
 
-var triviaSet = [questionOne]
+var triviaSet = [questionOne] 
 
 
 

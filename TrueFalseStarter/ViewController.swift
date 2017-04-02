@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     }
     
     func displayScore() {
-        // Hide the answer buttons
+        // Hide the answer buttons 
         trueButton.isHidden = true
         falseButton.isHidden = true
         
