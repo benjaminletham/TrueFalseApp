@@ -38,7 +38,7 @@ let questionEleven = Trivia(question: "Speedflying is a type of paragliding", an
 
 //Array of Trivia Questions
 
-let triviaQuestions = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen, questionEleven]
+let triviaQuestions = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen, questionEleven]  
 
 
 
