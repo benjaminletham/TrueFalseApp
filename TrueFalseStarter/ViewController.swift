@@ -19,12 +19,6 @@ class ViewController: UIViewController {
     
     var gameSound: SystemSoundID = 0
     
-    let trivia: [[String : String]] = [
-        ["Question": "Only female koalas can whistle", "Answer": "False"],
-        ["Question": "Blue whales are technically whales", "Answer": "True"],
-        ["Question": "Camels are cannibalistic", "Answer": "False"],
-        ["Question": "All ducks are birds", "Answer": "True"]
-    ]
     
     @IBOutlet weak var questionField: UILabel!
     @IBOutlet weak var trueButton: UIButton!
@@ -46,9 +40,9 @@ class ViewController: UIViewController {
     }
     
     func displayQuestion() {
-        indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextInt(upperBound: trivia.count)
-        let questionDictionary = trivia[indexOfSelectedQuestion]
-        questionField.text = questionDictionary["Question"]
+        indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextInt(upperBound: triviaSet.count)
+        let questionDictionary = triviaSet[indexOfSelectedQuestion]
+        questionField.text = questionDictionary.question
         playAgainButton.isHidden = true
     }
     
@@ -64,13 +58,21 @@ class ViewController: UIViewController {
         
     }
     
+    /*
+    
     @IBAction func checkAnswer(_ sender: UIButton) {
         // Increment the questions asked counter
         questionsAsked += 1
         
-        let selectedQuestionDict = trivia[indexOfSelectedQuestion]
-        let correctAnswer = selectedQuestionDict["Answer"]
+        let selectedQuestionDict = triviaSet[indexOfSelectedQuestion]
+        let correctAnswer = selectedQuestionDict.correctAnswer
+ 
+ */
+
         
+        //**** NEED TO ADD MORE BUTTONS AND REFACTOR LOGIC FOR CORREC/WRONG ANSWERS ****
+        
+        /*
         if (sender === trueButton &&  correctAnswer == "True") || (sender === falseButton && correctAnswer == "False") {
             correctQuestions += 1
             questionField.text = "Correct!"
@@ -80,7 +82,14 @@ class ViewController: UIViewController {
         
         loadNextRoundWithDelay(seconds: 2)
     }
+ 
+ */
     
+
+     //**** CODE TO BE REFACTORED ****
+
+      /*
+
     func nextRound() {
         if questionsAsked == questionsPerRound {
             // Game is over
@@ -101,6 +110,7 @@ class ViewController: UIViewController {
         nextRound()
     }
     
+ 
 
     
     // MARK: Helper Methods
@@ -116,6 +126,8 @@ class ViewController: UIViewController {
             self.nextRound()
         }
     }
+ 
+ */
     
     func loadGameStartSound() {
         let pathToSoundFile = Bundle.main.path(forResource: "GameSound", ofType: "wav")
@@ -127,6 +139,8 @@ class ViewController: UIViewController {
         AudioServicesPlaySystemSound(gameSound)
     }
 }
+ 
+ 
 
 
 
