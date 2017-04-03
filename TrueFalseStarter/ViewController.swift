@@ -12,7 +12,7 @@ import AudioToolbox
 
 class ViewController: UIViewController {
     
-    let questionsPerRound = 4
+    let questionsPerRound = triviaSet.count
     var questionsAsked = 0
     var correctQuestions = 0
     var indexOfSelectedQuestion: Int = 0
@@ -21,12 +21,15 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var questionField: UILabel!
-    @IBOutlet weak var trueButton: UIButton!
-    @IBOutlet weak var falseButton: UIButton!
-    @IBOutlet weak var playAgainButton: UIButton!
+    @IBOutlet weak var answerValidation: UITextField!
+    @IBOutlet weak var answerOption1: UIButton!
+    @IBOutlet weak var answerOption2: UIButton!
+    @IBOutlet weak var answerOption3: UIButton!
+    @IBOutlet weak var answerOption4: UIButton!
+    @IBOutlet weak var nextQuestion: UIButton!
     
-
-    override func viewDidLoad() {
+    
+      override func viewDidLoad() {
         super.viewDidLoad()
         loadGameStartSound()
         // Start game
@@ -43,16 +46,18 @@ class ViewController: UIViewController {
         indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextInt(upperBound: triviaSet.count)
         let questionDictionary = triviaSet[indexOfSelectedQuestion]
         questionField.text = questionDictionary.question
-        playAgainButton.isHidden = true
+        nextQuestion.isHidden = true
     }
     
     func displayScore() {
         // Hide the answer buttons 
-        trueButton.isHidden = true
-        falseButton.isHidden = true
+        answerOption1.isHidden = true
+        answerOption2.isHidden = true
+        answerOption3.isHidden = true
+        answerOption4.isHidden = true
         
         // Display play again button
-        playAgainButton.isHidden = false
+        nextQuestion.isHidden = false
         
         questionField.text = "Way to go!\nYou got \(correctQuestions) out of \(questionsPerRound) correct!"
         
