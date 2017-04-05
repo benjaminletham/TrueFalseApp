@@ -73,7 +73,7 @@
                                 </constraints>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozW-3f-5IT" userLabel="nextQuestion">
-                                <rect key="frame" x="45" y="520" width="284" height="60"/>
+                                <rect key="frame" x="45" y="512" width="284" height="60"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ozW-3f-5IT" secondAttribute="height" multiplier="71:15" id="XQ1-BC-aw9"/>
@@ -93,7 +93,7 @@
                             <constraint firstItem="8ui-G6-E4K" firstAttribute="leading" secondItem="w39-ok-QLj" secondAttribute="leadingMargin" constant="29" id="XXe-DR-q28"/>
                             <constraint firstItem="CB6-sV-qqK" firstAttribute="top" secondItem="rU8-tb-04z" secondAttribute="bottom" constant="32" id="aT6-SZ-VO5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CB6-sV-qqK" secondAttribute="trailing" constant="30" id="aWW-QY-8MR"/>
-                            <constraint firstItem="ozW-3f-5IT" firstAttribute="top" secondItem="fa3-jJ-rG2" secondAttribute="bottom" constant="53" id="aZS-me-dd1"/>
+                            <constraint firstItem="ozW-3f-5IT" firstAttribute="top" secondItem="fa3-jJ-rG2" secondAttribute="bottom" constant="45" id="aZS-me-dd1"/>
                             <constraint firstItem="rU8-tb-04z" firstAttribute="top" secondItem="8ui-G6-E4K" secondAttribute="bottom" constant="13.5" id="cjU-BT-JW4"/>
                             <constraint firstItem="fa3-jJ-rG2" firstAttribute="top" secondItem="BSX-M1-VzF" secondAttribute="bottom" constant="16" id="ez4-E8-Mfz"/>
                             <constraint firstItem="d6g-50-aRQ" firstAttribute="top" secondItem="CB6-sV-qqK" secondAttribute="bottom" constant="17" id="hlS-Ap-3xw"/>
