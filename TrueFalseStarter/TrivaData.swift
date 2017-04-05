@@ -31,12 +31,22 @@ let questionOne = Trivia(question: "In which year did BASE jumping begin?", answ
                                                                                       "Option 3": "1978",
                                                                                       "Option 4": "1991"], correctAnswer: 2)
 
+let questionTwo = Trivia(question: "Which location is the heart of U.S. big wall rock climbing", answers: ["Option 1": "Red Rock",
+                                                                                      "Option 2": "Smith Rock",
+                                                                                      "Option 3": "Yosemite",
+                                                                                      "Option 4": "Malibu Beach"], correctAnswer: 3)
+
+let questionThree = Trivia(question: "Teahupo is a famous wave for surfers. Where is it located?", answers: ["Option 1": "Bali",
+                                                                                      "Option 2": "California",
+                                                                                      "Option 3": "New Zealand",
+                                                                                      "Option 4": "Tahiti"], correctAnswer: 4)
+
 
 
 
 //Array of Trivia Questions
 
-var triviaSet = [questionOne] 
+var triviaSet = [questionOne, questionTwo, questionThree]
 
 
 

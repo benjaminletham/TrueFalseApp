@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In which year did BASE jumping begin?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ui-G6-E4K" userLabel="QuestionField">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ui-G6-E4K" userLabel="QuestionField">
                                 <rect key="frame" x="45" y="34" width="284" height="68"/>
                                 <color key="backgroundColor" red="0.0" green="0.1122591663" blue="0.71298076919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.0" green="0.1122591663" blue="0.71298076919999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,6 +49,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="CB6-sV-qqK" secondAttribute="height" multiplier="71:15" id="o6M-XA-yHk"/>
                                 </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6g-50-aRQ" userLabel="answerOption2">
                                 <rect key="frame" x="45" y="255" width="284" height="60"/>
@@ -56,6 +59,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="d6g-50-aRQ" secondAttribute="height" multiplier="71:15" id="yHy-Pe-ehs"/>
                                 </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSX-M1-VzF" userLabel="answerOption3">
                                 <rect key="frame" x="45" y="331" width="284" height="60"/>
@@ -63,6 +69,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BSX-M1-VzF" secondAttribute="height" multiplier="71:15" id="b87-Pv-irm"/>
                                 </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fa3-jJ-rG2" userLabel="answerOption4">
                                 <rect key="frame" x="45" y="407" width="284" height="60"/>
@@ -70,6 +79,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fa3-jJ-rG2" secondAttribute="height" multiplier="71:15" id="9lH-ia-oYb"/>
                                 </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozW-3f-5IT" userLabel="nextQuestion">
                                 <rect key="frame" x="45" y="512" width="284" height="60"/>
@@ -77,6 +89,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ozW-3f-5IT" secondAttribute="height" multiplier="71:15" id="XQ1-BC-aw9"/>
                                 </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.11225916633017993" blue="0.71298076923076925" alpha="1" colorSpace="calibratedRGB"/>

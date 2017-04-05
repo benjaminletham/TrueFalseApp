@@ -12,11 +12,11 @@ import AudioToolbox
 
 class ViewController: UIViewController {
     
-    let questionsPerRound = 10
-    var questionsAsked = 0
-    var correctQuestions = 0
+    let questionsPerRound = triviaSet.count
+    var allQuestions = triviaSet
+    var questionsAsked: Int = 0
+    var correctQuestions: Int = 0
     var indexOfSelectedQuestion: Int = 0
-    
     var gameSound: SystemSoundID = 0
     
     
@@ -28,17 +28,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var answerOption4: UIButton!
     @IBOutlet weak var nextQuestion: UIButton!
     
-    
-   
-   
-    
-    
-    
+
       override func viewDidLoad() {
         super.viewDidLoad()
         loadGameStartSound()
         // Start game
         playGameStartSound()
+    
         displayQuestion()
     }
 
@@ -48,11 +44,22 @@ class ViewController: UIViewController {
     }
     
     func displayQuestion() {
-        indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextInt(upperBound: triviaSet.count)
-        let questionDictionary = triviaSet[indexOfSelectedQuestion]
-        questionField.text = questionDictionary.question
+     indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextInt(upperBound: triviaSet.count)
+     let randomQuestion = triviaSet[indexOfSelectedQuestion]
+        let currentQuestion = randomQuestion
+        questionField.text = currentQuestion.question
+        
+        answerOption1.setTitle(currentQuestion.answers["Option 1"], for: .normal)
+        answerOption2.setTitle(currentQuestion.answers["Option 2"], for: .normal)
+        answerOption3.setTitle(currentQuestion.answers["Option 3"], for: .normal)
+        answerOption4.setTitle(currentQuestion.answers["Option 4"], for: .normal)
+        
         nextQuestion.isHidden = true
+        
+        
     }
+    
+    
     
     func displayScore() {
         // Hide the answer buttons 
@@ -67,6 +74,10 @@ class ViewController: UIViewController {
         questionField.text = "Way to go!\nYou got \(correctQuestions) out of \(questionsPerRound) correct!"
         
     }
+    
+
+    
+    
     
     /*
     
