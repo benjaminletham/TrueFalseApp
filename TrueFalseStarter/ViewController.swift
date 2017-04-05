@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var questionField: UILabel!
-    @IBOutlet weak var answerValidation: UITextField!
+    @IBOutlet weak var answerValidation: UILabel!
     @IBOutlet weak var answerOption1: UIButton!
     @IBOutlet weak var answerOption2: UIButton!
     @IBOutlet weak var answerOption3: UIButton!

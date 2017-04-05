@@ -34,16 +34,15 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sorry, that's not it." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rU8-tb-04z" userLabel="AnswerValidation">
-                                <rect key="frame" x="45" y="116" width="284" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.1122591663" blue="0.71298076919999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Arp-G6-q2Q" userLabel="answerValidation">
+                                <rect key="frame" x="45" y="103" width="284" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="rU8-tb-04z" secondAttribute="height" multiplier="142:15" id="wCJ-QB-FkI"/>
+                                    <constraint firstAttribute="width" secondItem="Arp-G6-q2Q" secondAttribute="height" multiplier="225:41" constant="9.6097560975609326" id="eJG-jk-bcY"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <color key="textColor" red="1" green="0.037820606389999997" blue="0.1000782447" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB6-sV-qqK" userLabel="answerOption1">
                                 <rect key="frame" x="45" y="178" width="284" height="60"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -83,18 +82,18 @@
                         <color key="backgroundColor" red="0.0" green="0.11225916633017993" blue="0.71298076923076925" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="8ui-G6-E4K" firstAttribute="top" secondItem="gOp-Wm-5HH" secondAttribute="bottom" constant="14" id="AFV-ns-xwp"/>
-                            <constraint firstItem="rU8-tb-04z" firstAttribute="leading" secondItem="w39-ok-QLj" secondAttribute="leadingMargin" constant="29" id="B5r-b2-eaG"/>
+                            <constraint firstItem="Arp-G6-q2Q" firstAttribute="leading" secondItem="w39-ok-QLj" secondAttribute="leadingMargin" constant="29" id="AXs-AZ-SBz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="d6g-50-aRQ" secondAttribute="trailing" constant="30" id="Fv3-jo-M7j"/>
+                            <constraint firstItem="Arp-G6-q2Q" firstAttribute="top" secondItem="8ui-G6-E4K" secondAttribute="bottom" constant="1" id="Gae-aV-79t"/>
                             <constraint firstItem="8ui-G6-E4K" firstAttribute="centerX" secondItem="w39-ok-QLj" secondAttribute="centerX" id="Ggy-h7-uBT"/>
                             <constraint firstItem="d6g-50-aRQ" firstAttribute="leading" secondItem="w39-ok-QLj" secondAttribute="leadingMargin" constant="29" id="HCG-i2-Ze2"/>
                             <constraint firstItem="fa3-jJ-rG2" firstAttribute="leading" secondItem="w39-ok-QLj" secondAttribute="leadingMargin" constant="29" id="K76-z4-wri"/>
                             <constraint firstItem="CB6-sV-qqK" firstAttribute="leading" secondItem="w39-ok-QLj" secondAttribute="leadingMargin" constant="29" id="NAi-9H-tHb"/>
+                            <constraint firstItem="CB6-sV-qqK" firstAttribute="top" secondItem="Arp-G6-q2Q" secondAttribute="bottom" constant="25" id="O51-9e-gT9"/>
                             <constraint firstItem="ozW-3f-5IT" firstAttribute="leading" secondItem="w39-ok-QLj" secondAttribute="leadingMargin" constant="29" id="UeJ-Qw-e3P"/>
                             <constraint firstItem="8ui-G6-E4K" firstAttribute="leading" secondItem="w39-ok-QLj" secondAttribute="leadingMargin" constant="29" id="XXe-DR-q28"/>
-                            <constraint firstItem="CB6-sV-qqK" firstAttribute="top" secondItem="rU8-tb-04z" secondAttribute="bottom" constant="32" id="aT6-SZ-VO5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CB6-sV-qqK" secondAttribute="trailing" constant="30" id="aWW-QY-8MR"/>
                             <constraint firstItem="ozW-3f-5IT" firstAttribute="top" secondItem="fa3-jJ-rG2" secondAttribute="bottom" constant="45" id="aZS-me-dd1"/>
-                            <constraint firstItem="rU8-tb-04z" firstAttribute="top" secondItem="8ui-G6-E4K" secondAttribute="bottom" constant="13.5" id="cjU-BT-JW4"/>
                             <constraint firstItem="fa3-jJ-rG2" firstAttribute="top" secondItem="BSX-M1-VzF" secondAttribute="bottom" constant="16" id="ez4-E8-Mfz"/>
                             <constraint firstItem="d6g-50-aRQ" firstAttribute="top" secondItem="CB6-sV-qqK" secondAttribute="bottom" constant="17" id="hlS-Ap-3xw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BSX-M1-VzF" secondAttribute="trailing" constant="30" id="kea-Nn-CQU"/>
@@ -102,7 +101,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ozW-3f-5IT" secondAttribute="trailing" constant="30" id="nbc-P8-c2g"/>
                             <constraint firstItem="BSX-M1-VzF" firstAttribute="top" secondItem="d6g-50-aRQ" secondAttribute="bottom" constant="16" id="tkF-JC-GsU"/>
                             <constraint firstItem="BSX-M1-VzF" firstAttribute="leading" secondItem="w39-ok-QLj" secondAttribute="leadingMargin" constant="29" id="vaJ-f1-S8k"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rU8-tb-04z" secondAttribute="trailing" constant="30" id="vyK-Ch-if0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Arp-G6-q2Q" secondAttribute="trailing" constant="30" id="vab-xd-8mv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8ui-G6-E4K" secondAttribute="trailing" constant="30" id="y48-RS-n8K"/>
                         </constraints>
                     </view>
@@ -112,7 +111,7 @@
                         <outlet property="answerOption2" destination="d6g-50-aRQ" id="4xc-xI-pfL"/>
                         <outlet property="answerOption3" destination="BSX-M1-VzF" id="PbN-9u-qLj"/>
                         <outlet property="answerOption4" destination="fa3-jJ-rG2" id="VVz-fZ-qY9"/>
-                        <outlet property="answerValidation" destination="rU8-tb-04z" id="O6F-dM-cyz"/>
+                        <outlet property="answerValidation" destination="Arp-G6-q2Q" id="SjH-eR-PbT"/>
                         <outlet property="nextQuestion" destination="ozW-3f-5IT" id="eFt-W5-rZW"/>
                         <outlet property="questionField" destination="8ui-G6-E4K" id="YPE-2v-8g2"/>
                     </connections>
