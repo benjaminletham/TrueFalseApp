@@ -12,7 +12,7 @@ import AudioToolbox
 
 class ViewController: UIViewController {
     
-    let questionsPerRound = triviaSet.count
+    let questionsPerRound = 10
     var questionsAsked = 0
     var correctQuestions = 0
     var indexOfSelectedQuestion: Int = 0
@@ -27,6 +27,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var answerOption3: UIButton!
     @IBOutlet weak var answerOption4: UIButton!
     @IBOutlet weak var nextQuestion: UIButton!
+    
+    
+   
+   
+    
     
     
       override func viewDidLoad() {
