@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     var correctQuestions: Int = 0
     var indexOfSelectedQuestion: Int = 0
     var gameSound: SystemSoundID = 0
-    
+    var usedQuestions: NSMutableArray = []
     
     @IBOutlet weak var questionField: UILabel!
     @IBOutlet weak var answerValidation: UILabel!
@@ -28,14 +28,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var answerOption4: UIButton!
     @IBOutlet weak var nextQuestion: UIButton!
     
+    
 
       override func viewDidLoad() {
         super.viewDidLoad()
         loadGameStartSound()
         // Start game
         playGameStartSound()
-    
+        
         displayQuestion()
+    
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,21 +51,65 @@ class ViewController: UIViewController {
      let randomQuestion = triviaSet[indexOfSelectedQuestion]
         let currentQuestion = randomQuestion
         questionField.text = currentQuestion.question
-        
-        answerOption1.setTitle(currentQuestion.answers["Option 1"], for: .normal)
-        answerOption2.setTitle(currentQuestion.answers["Option 2"], for: .normal)
-        answerOption3.setTitle(currentQuestion.answers["Option 3"], for: .normal)
-        answerOption4.setTitle(currentQuestion.answers["Option 4"], for: .normal)
-        
         nextQuestion.isHidden = true
         
+        answerOption1.setTitle(currentQuestion.answerOption1, for: .normal)
+        answerOption2.setTitle(currentQuestion.answerOption2, for: .normal)
+        answerOption3.setTitle(currentQuestion.answerOption3, for: .normal)
+        answerOption4.setTitle(currentQuestion.answerOption4, for: .normal)
+        
+     
+        
+}
+    
+    @IBAction func checkAnswer(sender: UIButton) {
+        
+        questionsAsked += 1
+        
+        let selectedQuestion = triviaSet[indexOfSelectedQuestion]
+        let correctAnswer = selectedQuestion.correctAnswer
+        
+       
+        
+      
+        if (sender.titleLabel!.text == correctAnswer) {
+            correctQuestions += 1
+            answerValidation.text = "Correct!"
+            disableButtons()
+            
+        } else {
+            answerValidation.text = "Sorry, that's not it."
+            disableButtons()
+        }
+        
+       
+        
+     
+    
         
     }
     
+    func disableButtons() {
+        answerOption1.isUserInteractionEnabled = false
+        answerOption2.isUserInteractionEnabled = false
+        answerOption3.isUserInteractionEnabled = false
+        answerOption4.isUserInteractionEnabled = false
+    }
+    
+    func enableButtons() {
+        answerOption1.isUserInteractionEnabled = true
+        answerOption2.isUserInteractionEnabled = true
+        answerOption3.isUserInteractionEnabled = true
+        answerOption4.isUserInteractionEnabled = true
+    }
     
     
-    func displayScore() {
-        // Hide the answer buttons 
+  
+    
+    
+    
+ /*   func displayScore() {
+        // Hide the answer buttons
         answerOption1.isHidden = true
         answerOption2.isHidden = true
         answerOption3.isHidden = true
@@ -74,6 +121,8 @@ class ViewController: UIViewController {
         questionField.text = "Way to go!\nYou got \(correctQuestions) out of \(questionsPerRound) correct!"
         
     }
+    
+  */
     
 
     

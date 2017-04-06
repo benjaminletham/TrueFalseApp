@@ -12,34 +12,62 @@ import UIKit
 
 class Trivia {
     var question: String
-    var answers: [String: String]
-    var correctAnswer: Int
+    var answerOption1: String
+    var answerOption2: String
+    var answerOption3: String
+    var answerOption4: String
+    var correctAnswer: String
     
-    init(question: String, answers: [String: String], correctAnswer: Int) {
+    init(question: String, answerOption1: String, answerOption2: String, answerOption3: String, answerOption4: String, correctAnswer: String) {
+        
     self.question = question
-    self.answers = answers
+    self.answerOption1 = answerOption1
+    self.answerOption2 = answerOption2
+    self.answerOption3 = answerOption3
+    self.answerOption4 = answerOption4
     self.correctAnswer = correctAnswer
         
     }
     
 }
 
+
 //Trivia Questions
 
-let questionOne = Trivia(question: "In which year did BASE jumping begin?", answers: ["Option 1": "1969",
-                                                                                      "Option 2": "1976",
-                                                                                      "Option 3": "1978",
-                                                                                      "Option 4": "1991"], correctAnswer: 2)
+let questionOne = Trivia(question: "In which year did BASE jumping begin?",
+                         answerOption1: "1969",
+                         answerOption2: "1976",
+                         answerOption3: "1978",
+                         answerOption4: "1991",
+                         correctAnswer: "1976")
 
-let questionTwo = Trivia(question: "Which location is the heart of U.S. big wall rock climbing", answers: ["Option 1": "Red Rock",
-                                                                                      "Option 2": "Smith Rock",
-                                                                                      "Option 3": "Yosemite",
-                                                                                      "Option 4": "Malibu Beach"], correctAnswer: 3)
+let questionTwo = Trivia(question: "Which location is the heart of U.S. big wall rock climbing",
+                         answerOption1: "Red Rock",
+                         answerOption2: "Smith Rock",
+                         answerOption3: "Yosemite",
+                         answerOption4: "Malibu Beach",
+                         correctAnswer: "Yosemite")
 
-let questionThree = Trivia(question: "Teahupo is a famous wave for surfers. Where is it located?", answers: ["Option 1": "Bali",
-                                                                                      "Option 2": "California",
-                                                                                      "Option 3": "New Zealand",
-                                                                                      "Option 4": "Tahiti"], correctAnswer: 4)
+let questionThree = Trivia(question: "Teahupo is a famous wave for surfers. Where is it located?",
+                           answerOption1: "Bali",
+                           answerOption2: "California",
+                           answerOption3: "New Zealand",
+                           answerOption4: "Tahiti",
+                         correctAnswer: "Tahiti")
+
+let questionFour = Trivia(question: "In skydiving; you can only make one mistake.",
+                          answerOption1: "True",
+                          answerOption2: "False",
+                          answerOption3: "",
+                          answerOption4: "",
+                         correctAnswer: "False")
+
+let questionFive = Trivia(question: "The best surfer in the water is the one having the most fun.",
+                          answerOption1: "True",
+                          answerOption2: "False",
+                          answerOption3: "",
+                          answerOption4: "",
+                          correctAnswer: "True")
 
 
 
