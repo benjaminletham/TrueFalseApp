@@ -44,7 +44,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB6-sV-qqK" userLabel="answerOption1">
-                                <rect key="frame" x="49" y="189.33333333333337" width="315" height="66.666666666666629"/>
+                                <rect key="frame" x="49" y="189" width="315" height="66.666666666666657"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="CB6-sV-qqK" secondAttribute="height" multiplier="71:15" id="o6M-XA-yHk"/>
@@ -52,6 +52,10 @@
                                 <state key="normal">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="answer1Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tTX-tT-PMQ"/>
+                                    <action selector="answer1Touch:" destination="BYZ-38-t0r" eventType="touchDown" id="rYW-x6-YCH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6g-50-aRQ" userLabel="answerOption2">
                                 <rect key="frame" x="49" y="273" width="315" height="66.666666666666686"/>
@@ -64,7 +68,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSX-M1-VzF" userLabel="answerOption3">
-                                <rect key="frame" x="49" y="355.66666666666669" width="315" height="66.666666666666629"/>
+                                <rect key="frame" x="49" y="355" width="315" height="66.666666666666686"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BSX-M1-VzF" secondAttribute="height" multiplier="71:15" id="b87-Pv-irm"/>
@@ -74,7 +78,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fa3-jJ-rG2" userLabel="answerOption4">
-                                <rect key="frame" x="49" y="438.33333333333326" width="315" height="66.666666666666686"/>
+                                <rect key="frame" x="49" y="438" width="315" height="66.666666666666686"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fa3-jJ-rG2" secondAttribute="height" multiplier="71:15" id="9lH-ia-oYb"/>

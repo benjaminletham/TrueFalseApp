@@ -47,47 +47,58 @@ class ViewController: UIViewController {
     }
     
     func displayQuestion() {
-     indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextInt(upperBound: triviaSet.count)
-     let randomQuestion = triviaSet[indexOfSelectedQuestion]
-        let currentQuestion = randomQuestion
-        questionField.text = currentQuestion.question
+     indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextInt(upperBound: Questions().question.count)
+     let randomQuestion = Questions().question[indexOfSelectedQuestion]
+        questionField.text = randomQuestion.question
         nextQuestion.isHidden = true
         
-        answerOption1.setTitle(currentQuestion.answerOption1, for: .normal)
-        answerOption2.setTitle(currentQuestion.answerOption2, for: .normal)
-        answerOption3.setTitle(currentQuestion.answerOption3, for: .normal)
-        answerOption4.setTitle(currentQuestion.answerOption4, for: .normal)
+        answerOption1.setTitle(randomQuestion.answerOption1, for: .normal)
+        answerOption2.setTitle(randomQuestion.answerOption2, for: .normal)
+        answerOption3.setTitle(randomQuestion.answerOption3, for: .normal)
+        answerOption4.setTitle(randomQuestion.answerOption4, for: .normal)
         
      
         
 }
     
-    @IBAction func checkAnswer(sender: UIButton) {
+    
+    func displayScore() {
         
-        questionsAsked += 1
+        // Hide the four answer buttons while display score
+        answerOption1.isHidden = true
+        answerOption2.isHidden = true
+        answerOption3.isHidden = true
+        answerOption4.isHidden = true
         
-        let selectedQuestion = triviaSet[indexOfSelectedQuestion]
+        
+        // Display play again button
+        nextQuestion.isHidden = false
+        
+        questionField.text = "Way to go!\nYou got \(correctQuestions) out of \(questionsPerRound) correct!"
+        
+    }
+    
+    
+    
+  @IBAction func checkAnswer(sender: UIButton) {
+       
+     questionsAsked += 1
+        
+     let selectedQuestion = Questions().question[indexOfSelectedQuestion]
         let correctAnswer = selectedQuestion.correctAnswer
         
-       
-        
-      
-        if (sender.titleLabel!.text == correctAnswer) {
+        if (sender === answerOption1 && correctAnswer == "answerOption1") || (sender === answerOption2 && correctAnswer == "answerOption2") || (sender === answerOption3 && correctAnswer == "answerOption3") || (sender === answerOption4 && correctAnswer == "answerOption4"){
             correctQuestions += 1
             answerValidation.text = "Correct!"
-            disableButtons()
             
         } else {
             answerValidation.text = "Sorry, that's not it."
-            disableButtons()
-        }
-        
-       
-        
-     
-    
-        
+            }
     }
+    
+    
+    
+    
     
     func disableButtons() {
         answerOption1.isUserInteractionEnabled = false
